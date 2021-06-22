@@ -1,14 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Monstercat by JK</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <!-- navbar and logo -->
+    <nav class="nav-bar">
+      <div class="nav-bar__logo">
+        <img
+          src="./assets/logo.png"
+          class="nav-bar__logo-img"
+          alt="Monstercat logo"
+        />
+      </div>
+      <div class="nav-bar__options">
+        <a href="" class="nav__bar-options-links">MUSIC</a
+        ><a href="" class="nav__bar-options-links">ARTIRST</a
+        ><a href="" class="nav__bar-options-links">EVENTS</a
+        ><a href="" class="nav__bar-options-links">COMERCIAL</a
+        ><a href="" class="nav__bar-options-links">RADIO</a
+        ><a href="" class="nav__bar-options-links">GOLD</a
+        ><a href="" class="nav__bar-options-links">SHOP</a
+        ><a href="" class="nav__bar-options-links">BLOG</a
+        ><a href="" class="nav__bar-options-links">?</a>
+      </div>
+    </nav>
+    <!-- Music menu and music controller -->
+    <div class="music__menu">
+      <div class="music__menu-section">
+        <div class="music__menu-music-search">
+          <div class="music__menu-search-item">PLAYER</div>
+          <div class="music__menu-search-item">SIGN IN</div>
+          <div class="music__menu-search-item">SEARCH</div>
+        </div>
+      </div>
+      <div class="music__menu-section">
+        <div class="music__menu-music-control">
+          <audio class="music__menu-audio-controller">
+            <source src="null.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+    <!-- feed -->
+    <main class="feed">
+      <!-- first section -->
+      <section class="feed__section">
+        <article class="feed__section-artist-img">
+          <img src="" alt="artist album pic" />
+        </article>
+        <article class="feed__section-info">
+          <article class="feed__section-info-title">LEVEL DAYS</article>
+          <article class="feed__section-info-artist">Conro</article>
+          <article class="feed__section-info-release-date">
+            Released May 22, 2020
+          </article>
+          <article class="feed__section-info-others-album">
+            <img
+              alt="SUGGESTION 1"
+              class="feed__section-info-others-album-artists"
+            /><img
+              alt="SUGGESTION 2"
+              class="feed__section-info-others-album-artists"
+            />
+          </article>
+        </article>
+      </section>
+      <!-- second section -->
+      <section class="feed__section">
+        <article class="feed__section-social">
+          <div class="feed__section-social-icons">
+            <img
+              src="social media"
+              alt=""
+              class="feed__section-social-icons-img"
+            />
+          </div>
+          <div class="feed__section-social-icons">
+            <img
+              src="social media"
+              alt=""
+              class="feed__section-social-icons-img"
+            />
+          </div>
+          <div class="feed__section-social-icons">
+            <img
+              src="social media"
+              alt=""
+              class="feed__section-social-icons-img"
+            />
+          </div>
+          <div class="feed__section-social-icons">
+            <img
+              src="social media"
+              alt=""
+              class="feed__section-social-icons-img"
+            />
+          </div>
+        </article>
+        <article class="feed__section-tracklist"></article>
+      </section>
+      <div class="feed__section-bg">
+        <div class="feed__section-img">
+          <img src="" alt="img background album" srcset="" />
+        </div>
+      </div>
+    </main>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
