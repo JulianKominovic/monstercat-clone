@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1bad4afc9a.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Monstercat by JK</title>
   </head>
@@ -33,15 +45,28 @@
     <div class="music__menu">
       <div class="music__menu-section">
         <div class="music__menu-music-search">
-          <div class="music__menu-search-item">PLAYER</div>
-          <div class="music__menu-search-item">SIGN IN</div>
-          <div class="music__menu-search-item">SEARCH</div>
+          <div class="music__menu-search-item">
+            <a href="#" class="music__menu-search-item-link"
+              ><i class="fas fa-music margin-left-icons-navbar"></i> PLAYER</a
+            >
+          </div>
+          <div class="music__menu-search-item">
+            <a href="#" class="music__menu-search-item-link"
+              ><i class="fas fa-sign-in-alt margin-left-icons-navbar"></i> SIGN
+              IN</a
+            >
+          </div>
+          <div class="music__menu-search-item">
+            <a href="#" class="music__menu-search-item-link"
+              ><i class="fas fa-search margin-left-icons-navbar"></i>SEARCH</a
+            >
+          </div>
         </div>
       </div>
       <div class="music__menu-section">
         <div class="music__menu-music-control">
-          <audio class="music__menu-audio-controller">
-            <source src="null.mp3" type="audio/mp3" />
+          <audio class="music__menu-audio-controller" controls>
+            <source src="./assets/pistola-lgante.mp3" type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -50,9 +75,13 @@
     <!-- feed -->
     <main class="feed">
       <!-- first section -->
-      <section class="feed__section">
+      <section class="feed__section fading-section">
         <article class="feed__section-artist-img">
-          <img src="" alt="artist album pic" />
+          <img
+            src="./assets/artist-cover.jpg"
+            class="feed__section-artist-img-real"
+            alt="artist album pic"
+          />
         </article>
         <article class="feed__section-info">
           <article class="feed__section-info-title">LEVEL DAYS</article>
@@ -62,9 +91,11 @@
           </article>
           <article class="feed__section-info-others-album">
             <img
+              src="./assets/suggest-1.jpg"
               alt="SUGGESTION 1"
               class="feed__section-info-others-album-artists"
             /><img
+              src="./assets/suggest-2.jpg"
               alt="SUGGESTION 2"
               class="feed__section-info-others-album-artists"
             />
@@ -74,42 +105,81 @@
       <!-- second section -->
       <section class="feed__section">
         <article class="feed__section-social">
-          <div class="feed__section-social-icons">
-            <img
-              src="social media"
-              alt=""
-              class="feed__section-social-icons-img"
-            />
+          <div class="feed__section-social-icons container-icon icon-play">
+            <a href="#" class="feed__section-social-icons-link"
+              >PLAY <i class="fas fa-play"></i>
+            </a>
           </div>
-          <div class="feed__section-social-icons">
-            <img
-              src="social media"
-              alt=""
-              class="feed__section-social-icons-img"
-            />
+          <div class="feed__section-social-text">STREAM IT IN YOUR WAY</div>
+          <div class="feed__section-social-icons container-icon">
+            <a href="#" class="feed__section-social-icons-link"
+              ><i class="fab fa-youtube"></i>
+            </a>
           </div>
-          <div class="feed__section-social-icons">
-            <img
-              src="social media"
-              alt=""
-              class="feed__section-social-icons-img"
-            />
+          <div class="feed__section-social-icons container-icon">
+            <a href="#" class="feed__section-social-icons-link"
+              ><i class="fab fa-spotify"></i>
+            </a>
           </div>
-          <div class="feed__section-social-icons">
-            <img
-              src="social media"
-              alt=""
-              class="feed__section-social-icons-img"
-            />
+          <div class="feed__section-social-icons container-icon">
+            <a href="#" class="feed__section-social-icons-link"
+              ><i class="fab fa-apple"></i>
+            </a>
+          </div>
+          <div class="feed__section-social-icons container-icon">
+            <a href="#" class="feed__section-social-icons-link"
+              ><i class="fab fa-google"></i>
+            </a>
+          </div>
+          <div class="feed__section-social-icons container-icon">
+            <a href="#" class="feed__section-social-icons-link"
+              ><i class="fab fa-playstation"></i>
+            </a>
           </div>
         </article>
-        <article class="feed__section-tracklist"></article>
+        <article class="feed__section-tracklist">
+          <div class="feed__section-tracklist-soundtrack">
+            <div class="tracklist-number">1</div>
+            <a href="" class="tracklist-button"
+              ><i class="fas fa-play-circle"></i
+            ></a>
+            <div class="tracklist-name">Hola soy horizonte</div>
+            <a href="" class="tracklist-artist">Julian</a>
+            <div class="tracklist-duration">3:03</div>
+            <a href="" class="tracklist-credits">CREDIT</a>
+          </div>
+          <div class="feed__section-tracklist-soundtrack">
+            <div class="tracklist-number">2</div>
+            <a href="" class="tracklist-button"
+              ><i class="fas fa-play-circle"></i
+            ></a>
+            <div class="tracklist-name">Hola soy horizonte</div>
+            <a href="" class="tracklist-artist">Julian</a>
+            <div class="tracklist-duration">3:03</div>
+            <a href="" class="tracklist-credits">CREDIT</a>
+          </div>
+          <div class="feed__section-tracklist-soundtrack">
+            <div class="tracklist-number">3</div>
+            <a href="" class="tracklist-button"
+              ><i class="fas fa-play-circle"></i
+            ></a>
+            <div class="tracklist-name">Hola soy horizonte</div>
+            <a href="" class="tracklist-artist">Julian</a>
+            <div class="tracklist-duration">3:03</div>
+            <a href="" class="tracklist-credits">CREDIT</a>
+          </div>
+          <div class="feed__section-tracklist-soundtrack">
+            <div class="tracklist-number">4</div>
+            <a href="" class="tracklist-button"
+              ><i class="fas fa-play-circle"></i
+            ></a>
+            <div class="tracklist-name">Hola soy horizonte</div>
+            <a href="" class="tracklist-artist">Julian</a>
+            <div class="tracklist-duration">3:03</div>
+            <a href="" class="tracklist-credits">CREDIT</a>
+          </div>
+        </article>
       </section>
-      <div class="feed__section-bg">
-        <div class="feed__section-img">
-          <img src="" alt="img background album" srcset="" />
-        </div>
-      </div>
     </main>
 
     <script src="index.js"></script>
