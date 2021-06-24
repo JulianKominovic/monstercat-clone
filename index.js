@@ -111,7 +111,7 @@ const instance = axios.create({
 });
 
 const coverImageInstance = axios.create({
-  baseURL: "http://coverartarchive.org/",
+  baseURL: "https://coverartarchive.org/",
 });
 
 const getTextFormatReady = (formText) => {
