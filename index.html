@@ -44,38 +44,58 @@
       </div>
     </nav>
     <!-- Music menu and music controller -->
-    <div class="music__menu">
-      <div class="music__menu-section">
-        <div class="music__menu-music-search">
-          <div class="music__menu-search-item">
-            <a href="#" class="music__menu-search-item-link"
-              ><i class="fas fa-music margin-left-icons-navbar"></i> PLAYER</a
-            >
-          </div>
-          <div class="music__menu-search-item">
-            <a href="#" class="music__menu-search-item-link"
-              ><i class="fas fa-sign-in-alt margin-left-icons-navbar"></i> SIGN
-              IN</a
-            >
-          </div>
-          <div class="music__menu-search-item">
-            <form class="music__menu-search-form" method="GET">
-              <button type="submit" class="music__menu-search-submit">
-                <i class="fas fa-search margin-left-icons-navbar"></i>
-              </button>
-              <input
-                class="music__menu-search-text"
-                type="text"
-                placeholder="BUSCAR ARTISTA"
-              />
-              <span class="errorHandling"></span>
-            </form>
-          </div>
+
+    <div class="music__menu-searching">
+      <div class="music__menu-music-search">
+        <div class="music__menu-search-item">
+          <a href="#" class="music__menu-search-item-link"
+            ><i class="fas fa-music margin-left-icons-navbar"></i> PLAYER</a
+          >
+        </div>
+        <div class="music__menu-search-item">
+          <a href="#" class="music__menu-search-item-link"
+            ><i class="fas fa-sign-in-alt margin-left-icons-navbar"></i> SIGN
+            IN</a
+          >
+        </div>
+        <div class="music__menu-search-item">
+          <form class="music__menu-search-form" method="GET">
+            <button type="submit" class="music__menu-search-submit">
+              <i class="fas fa-search margin-left-icons-navbar"></i>
+            </button>
+            <input
+              class="music__menu-search-text"
+              type="text"
+              placeholder="BUSCAR ARTISTA"
+            />
+            <span class="errorHandling"></span>
+          </form>
         </div>
       </div>
-      <div class="music__menu-section">
+      </div>
+
+      <div class="music__menu-controls">
+        <p>Queen - It's a kind of magic</p>
         <div class="music__menu-music-control">
-          <audio class="music__menu-audio-controller" controls>
+          <a class="control-btn">
+            <i class="fas fa-random"></i>
+          </a>
+          <a class="control-btn">
+            <i class="fas fa-step-backward"></i>
+          </a>
+          <a class="control-btn">
+            <i class="fas fa-play"></i>
+          </a>
+          <a class="control-btn">
+            <i class="fas fa-step-forward"></i>
+          </a>
+          <a class="control-btn">
+            <i class="fas fa-redo"></i>
+          </a>
+          <a class="control-btn" id="volume-control">
+            <i class="fas fa-volume-down"></i>
+          </a>
+          <audio class="music__menu-audio-controller">
             <source src="./assets/pistola-lgante.mp3" type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
@@ -191,6 +211,115 @@
         </article>
       </section>
     </main>
+    <div>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, libero.
+      Eaque cum modi aperiam ratione consequatur. Odio hic corrupti soluta amet
+      consectetur incidunt repudiandae voluptate, necessitatibus quibusdam
+      consequatur iste, iusto, labore error architecto sequi libero quod ipsa?
+      Sint corporis fugit fugiat nam eveniet cumque neque iste odit praesentium
+      rerum doloremque alias, aspernatur doloribus quas voluptate ratione
+      consectetur temporibus. Quia, omnis sapiente quae a laborum harum
+      exercitationem ipsam quo! Enim ea nihil iusto modi perferendis
+      perspiciatis nulla omnis sit fugit quae dignissimos, facere eveniet dicta
+      asperiores reiciendis magnam aliquid quo. Dignissimos qui inventore quam
+      consequuntur vitae illum dolore odio in voluptates! Saepe ad autem
+      cupiditate, placeat provident vero ut dolorum totam voluptatem assumenda
+      itaque eligendi facere! Animi culpa, similique voluptatum laborum fugit
+      recusandae aliquid adipisci corrupti placeat maxime totam enim amet
+      dignissimos suscipit. Eius, totam? Exercitationem explicabo obcaecati
+      ipsum enim cumque reiciendis impedit eveniet sint ut odio dolor corrupti
+      cupiditate, aperiam pariatur ab, magni illo incidunt labore voluptate
+      quod. Saepe commodi accusantium et exercitationem dolorem officia illum
+      numquam illo consectetur rem quo, deserunt qui esse quod error sapiente,
+      odit, est ipsum fugiat voluptatum distinctio quae. Omnis sequi voluptas
+      doloribus voluptatem pariatur rerum beatae eum, rem distinctio.
+      Dignissimos possimus eveniet sint nostrum! Animi adipisci repellat
+      laudantium, molestias consectetur corrupti unde temporibus quas. Culpa
+      mollitia explicabo consequatur repudiandae quos quisquam, architecto, qui
+      labore facilis minima ad veritatis? Quae alias laboriosam libero maiores
+      quod asperiores officia facere delectus voluptate accusamus consequuntur
+      repellendus vel reprehenderit aut, nam at veritatis dolorum architecto,
+      perspiciatis repudiandae nulla assumenda? Suscipit modi incidunt quia aut
+      aspernatur molestias eius amet in, vitae impedit pariatur vero alias
+      doloremque dignissimos maxime enim quo saepe odio laudantium similique
+      sint? A ipsa quam quidem natus suscipit? Corporis placeat vel
+      reprehenderit cupiditate odit dolore fugiat. Nemo odio corporis
+      perferendis natus sit quas itaque quod, iure magnam aperiam placeat eos
+      iusto quibusdam blanditiis, nam ut est nisi veritatis molestiae, id sequi
+      praesentium cupiditate adipisci mollitia? Porro nisi laudantium deserunt
+      sed eaque, non pariatur praesentium dolorem quis dolores repellendus error
+      itaque omnis voluptates reprehenderit hic quidem harum eius distinctio at
+      voluptate tempora velit ducimus! Est unde velit enim minima maxime eveniet
+      et deleniti, eaque ipsam nulla quisquam voluptatum, consequatur,
+      perferendis dolore ut a iusto magnam optio dolor temporibus impedit. Quo
+      adipisci dolores quidem, autem tenetur aliquam sunt, nostrum ipsam
+      quisquam natus consectetur obcaecati perspiciatis impedit nesciunt qui
+      voluptates cupiditate quibusdam vitae eum rem! Omnis autem, optio itaque
+      veniam at molestias? Dolore adipisci quos illo nulla ullam amet, soluta a
+      dolor officiis voluptate pariatur at reprehenderit officia repellat fugit
+      quam, veniam eligendi perspiciatis omnis consequatur. Adipisci quos
+      tempore sapiente at ipsam incidunt saepe dicta rerum quis nesciunt ratione
+      aperiam, sed quidem eos libero recusandae deserunt laboriosam unde
+      nostrum. Totam blanditiis fugit quisquam animi quasi dolor soluta
+      aspernatur recusandae obcaecati pariatur accusamus, vel esse odio labore
+      ad neque eius repellat, dolorum commodi. Facilis facere porro minus
+      laborum. Aliquam molestiae eos esse doloribus voluptate veniam, quisquam
+      assumenda eum quibusdam iusto atque consequatur qui sunt sit quam
+      architecto doloremque quos! Voluptatibus distinctio, culpa similique iure
+      quis provident fuga quod repellat! Deserunt similique, quam cupiditate
+      enim atque assumenda libero ipsam recusandae! Similique, enim. Quidem,
+      quaerat voluptatibus placeat soluta quas a vel odit sed suscipit
+      dignissimos, doloremque maiores, recusandae vero quia illum est sint ullam
+      modi? Beatae cumque est vel modi sapiente maxime voluptatibus aliquid
+      deserunt veritatis earum amet perferendis a illum, praesentium cum
+      expedita non atque eligendi et exercitationem voluptate. Incidunt deleniti
+      dolore porro nam ullam ab amet neque eveniet non hic quo excepturi animi
+      vel id nostrum eum quod sunt quam quis, sint et aut recusandae!
+      Necessitatibus error perspiciatis eveniet illo odio accusantium
+      praesentium sequi fuga, beatae consequatur? Aspernatur nihil magni
+      eligendi? Perferendis natus facere cum inventore provident debitis.
+      Distinctio error expedita nulla repellat odit ad deleniti rerum! Alias
+      aliquid similique rerum natus nisi dolor dignissimos, tempore labore
+      doloremque ad incidunt fugiat voluptatum explicabo? Sequi aut molestiae ab
+      dolorem, magni suscipit sed eveniet ex earum officia, similique nulla
+      magnam maxime reiciendis quis quas quasi libero aspernatur ipsum, eos
+      dolores consequatur debitis voluptates iure? Ea enim illo incidunt. Dolore
+      quod laborum nam dolores soluta laudantium, placeat asperiores. Veritatis
+      aliquid maiores amet laborum? Voluptatem provident quia sunt rerum
+      expedita facilis aliquam corrupti assumenda totam eaque aperiam nam
+      necessitatibus sit cum, animi obcaecati consequatur praesentium? Animi
+      quae atque velit labore expedita dolore neque dolorem ex recusandae
+      inventore doloribus, veritatis blanditiis facere repellendus porro dolores
+      commodi veniam ullam ab. Mollitia a earum molestias molestiae, animi
+      tenetur. Quas est assumenda quisquam, officiis aut sunt, modi rem dolorum,
+      facilis quos ducimus? Natus vitae deserunt nisi aspernatur. Accusantium
+      dignissimos ullam sunt omnis hic, facere molestias natus impedit odio
+      vitae pariatur enim sequi similique consequatur quae ducimus voluptates
+      officia. Eum similique quos, ad, voluptatum molestiae deserunt distinctio
+      accusantium qui adipisci animi aliquid mollitia soluta odit consequatur
+      maiores veniam perspiciatis iste error ipsam earum natus dolor eaque
+      dolores. Quo officiis sit optio, voluptate eum dolorum, est velit veniam
+      laboriosam blanditiis tempore nesciunt nam vitae voluptates! Distinctio
+      velit sit ipsum reprehenderit possimus recusandae expedita alias, ipsam,
+      perspiciatis vitae at minus similique. Eligendi provident magnam saepe
+      exercitationem ad in debitis repudiandae quasi corrupti quas cum, cumque
+      ipsa ducimus voluptate magni, eum incidunt. Repellendus odit et id
+      assumenda magnam, aut sequi. Non, maiores reprehenderit. Culpa, vero
+      atque, tempora, accusantium ullam magnam sequi consequatur vitae nihil
+      quisquam debitis earum tempore rem iste. Consequuntur eligendi natus odit
+      iste ad. Quae velit ducimus corrupti provident dicta commodi id
+      reiciendis. Soluta consectetur vitae saepe, omnis explicabo incidunt enim
+      libero consequatur expedita. Culpa placeat rem impedit nostrum voluptatem,
+      quia nam recusandae incidunt facilis tempora, iusto id possimus quaerat,
+      animi accusantium harum voluptas natus voluptatum expedita magni.
+      Doloribus sequi totam placeat ipsam nostrum natus quae iusto nihil
+      laudantium odit nesciunt maxime, ipsum facilis vero necessitatibus esse et
+      obcaecati recusandae, odio neque beatae? Perferendis temporibus cum quam
+      error laudantium. Nam cum dolorem ex minima amet neque, fuga doloremque
+      laboriosam culpa explicabo sint vitae corporis soluta maiores, alias
+      voluptates. Distinctio rem numquam similique, ut, iste ex accusamus
+      voluptatum mollitia, autem eum atque.
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

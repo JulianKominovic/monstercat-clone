@@ -12,6 +12,7 @@ const albumReleaseDate = document.querySelector(
   ".feed__section-info-release-date"
 );
 const searchErrorIndicator = document.querySelector(".errorHandling");
+// ERRORS CODE
 const errorCode = {
   apiSlowingDown: "LA API ESTA TARDANDO MAS DE LO NORMAL...",
   artistUnkown: "ESTE ARTISTA NO ESTA EN LA BASE DE DATOS",

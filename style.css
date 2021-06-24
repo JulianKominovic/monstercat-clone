@@ -11,6 +11,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #fdfdfd;
 }
 
 .nav-bar {
@@ -20,6 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
+  position: relative;
   padding: 2vh 8vw;
 }
 
@@ -43,6 +45,12 @@ body {
   margin-left: 1vw;
 
   font-weight: 700;
+}
+
+.music__menu-searching {
+  display: inline-flex;
+  margin: 2vh 8vw;
+  background-color: #fdfdfd;
 }
 
 .music__menu-search-submit {
@@ -89,9 +97,6 @@ body {
   padding: 1vh 8vw;
 }
 
-.music__menu-section {
-}
-
 .music__menu-music-search {
   display: flex;
 
@@ -112,11 +117,39 @@ body {
   font-size: clamp(1vw, 1rem, 1.6vw);
   color: var(--light-dark-color);
 }
+.music__menu-controls {
+  display: inline-flex;
+  gap: 1vw;
+  position: sticky;
+  left: 67vw;
+  right: 0;
+  top: 2vh;
+  background-color: #fdfdfd;
+  padding: 2vh 2vw;
+}
+
+.music__menu-music-control {
+}
+
+.control-btn {
+  color: #383838;
+  text-decoration: none;
+  margin-right: 1em;
+  cursor: pointer;
+}
+#volume-control {
+  position: relative;
+}
+#volume-control::after {
+  content: "";
+  color: red;
+  position: absolute;
+}
 
 /* BODY ENGAGEMENT */
 
 .feed {
-  color: #fff;
+  color: #fdfdfd;
 
   background-image: url("./assets/bg-album-cover.jpg");
   background-repeat: no-repeat;
