@@ -15,7 +15,9 @@ const searchErrorIndicator = document.querySelector(".errorHandling");
 const errorCode = {
   apiSlowingDown: "LA API ESTA TARDANDO MAS DE LO NORMAL...",
   artistUnkown: "ESTE ARTISTA NO ESTA EN LA BASE DE DATOS",
+  artistError: "OCURRIO UN ERROR AL BUSCAR",
   emptySearch: "DEBES INTRODUCIR ALGO",
+  tryAgain: "OCURRIO UN ERROR. PRUEBA CON OTRO ARTISTA",
   ok: "",
 };
 
@@ -33,7 +35,6 @@ const buildSearch = (artistName, dateRelease, albumTitle, albumPicSource) => {
 
 const startCollectingData = (localString) => {
   const collectArtistData = (artistData) => {
-    console.log(artistData.artists);
     let artistId = artistData.artists[0].id;
     let artistName = artistData.artists[0].name;
     return { artistName: artistName, artistId: artistId };
@@ -42,7 +43,7 @@ const startCollectingData = (localString) => {
   const collectAlbumData = (albumData) => {
     let getRandomIndex = Math.floor(Math.random() * albumData.releases.length);
     let randomRelease = albumData.releases[getRandomIndex];
-    console.log(randomRelease);
+
     let releaseData = randomRelease.date;
     let albumName = randomRelease.title;
     return {
@@ -53,20 +54,42 @@ const startCollectingData = (localString) => {
   };
 
   const data = getSearchData(localString);
-  data.then((res) => {
-    let { artistName, artistId } = collectArtistData(res);
-    getAlbumRandom(artistId).then((res) => {
-      let { randomRelease, releaseData, albumName } = collectAlbumData(res);
-      getAlbumCover(randomRelease.id)
+  let maxTries = 4;
+  let counting = 0;
+  const compileData = () => {
+    if (counting < maxTries) {
+      data
         .then((res) => {
-          console.log(res);
-          buildSearch(artistName, releaseData, albumName, res);
+          let { artistName, artistId } = collectArtistData(res);
+          getAlbumRandom(artistId)
+            .then((res) => {
+              let { randomRelease, releaseData, albumName } = collectAlbumData(
+                res
+              );
+              getAlbumCover(randomRelease.id)
+                .then((res) => {
+                  showError(errorCode.ok);
+                  buildSearch(artistName, releaseData, albumName, res);
+                })
+                .catch((err) => {
+                  counting++;
+                  compileData();
+                });
+            })
+            .catch((err) => {
+              counting++;
+              compileData();
+            });
         })
-        .catch(() => {
-          collectAlbumData();
+        .catch((err) => {
+          counting++;
+          compileData();
         });
-    });
-  });
+    } else {
+      showError(errorCode.artistError);
+    }
+  };
+  compileData();
 };
 
 searchForm.addEventListener("submit", (e) => {
@@ -76,10 +99,8 @@ searchForm.addEventListener("submit", (e) => {
     let localString = getTextFormatReady(e.target.elements[1].value);
     startCollectingData(localString);
   } else {
-    showError(errorCode.emptySearch);
+    showError(errorCode.tryAgain);
   }
-  //   let searched = getSearch(localString);
-  //   console.log(searched);
 });
 
 // FETCH API AXIOS
@@ -102,6 +123,11 @@ const getTextFormatReady = (formText) => {
 
 const validateSearch = (text) => {
   if (text == "") {
+    showError(errorCode.emptySearch);
+    return 1;
+  }
+  if (text == " ") {
+    showError(errorCode.emptySearch);
     return 1;
   }
   return 0;
@@ -128,7 +154,7 @@ const getAlbumCover = (albumId) => {
   const axiosData = axiosProm
     .then((res) => res.data)
     .catch((err) => {
-      showError(errorCode.artistUnkown);
+      showError(errorCode.artistError);
     });
   return axiosData;
 };
