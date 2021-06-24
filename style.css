@@ -12,7 +12,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fdfdfd;
-  width: 100vw;
 }
 
 .nav-bar {
@@ -366,5 +365,52 @@ body {
 
   .music__menu-search-form {
     display: flex;
+  }
+
+  .music__menu-search-submit {
+    display: none;
+  }
+  /* FEEED SECTION */
+  .feed__section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feed__section-info > * {
+    text-align-last: center;
+    font-size: clamp(1em, 2vw, 20vw);
+  }
+  .feed__section-info-others-album {
+    width: auto;
+    margin: 2vh 0;
+    place-content: center;
+  }
+  .feed__section-info-others-album-artists {
+    max-width: 30vw;
+  }
+  .feed__section-social {
+    text-align: center;
+    width: 100%;
+  }
+  .feed__section-social-icons {
+    font-size: clamp(2em, 5vw, 20vw);
+    width: 20%;
+  }
+  .feed__section-social-text {
+    font-size: clamp(2em, 5vw, 20vw);
+  }
+  .feed__section-social-icons:nth-child(1) {
+    width: 50%;
+  }
+  .feed__section-social-icons-link {
+    padding: 2vh 2vw;
+  }
+  .feed__section-tracklist {
+    width: 90vw;
+  }
+  :is(.tracklist-artist, .tracklist-duration, .tracklist-credits) {
+    display: none;
+  }
+  .feed__section-tracklist-soundtrack {
+    gap: 6vw;
   }
 }
