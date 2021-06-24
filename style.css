@@ -12,6 +12,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fdfdfd;
+  width: 100vw;
 }
 
 .nav-bar {
@@ -123,7 +124,7 @@ body {
   position: sticky;
   left: 67vw;
   right: 0;
-  top: 2vh;
+  top: 0;
   background-color: #fdfdfd;
   padding: 2vh 2vw;
 }
@@ -136,14 +137,6 @@ body {
   text-decoration: none;
   margin-right: 1em;
   cursor: pointer;
-}
-#volume-control {
-  position: relative;
-}
-#volume-control::after {
-  content: "";
-  color: red;
-  position: absolute;
 }
 
 /* BODY ENGAGEMENT */
@@ -261,7 +254,7 @@ body {
   flex-wrap: wrap;
   padding: 1vh 1vw;
   color: #383838;
-  font-size: clamp(0.5em, 0.8vw, 8vw);
+  font-size: clamp(0.8em, 0.8vw, 8vw);
 }
 
 .feed__section-tracklist-soundtrack:nth-child(even) {
@@ -300,4 +293,78 @@ body {
   padding: 2px;
   font-size: clamp(0.5em, 0.5vw, 8vw);
   border: 1px solid #383838;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+  .nav-bar {
+    display: block;
+  }
+  .nav-bar__logo {
+    width: 100%;
+  }
+  .nav-bar__options {
+    display: none;
+  }
+  .music__menu-searching {
+    display: inline-flex;
+    width: 100vw;
+
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .music__menu-music-search {
+    flex-direction: column-reverse;
+  }
+  .music__menu-search-item::after {
+    display: none;
+  }
+  .music__menu-search-item:nth-child(-n + 2) {
+    display: none;
+  }
+  .music__menu-search-item-link {
+    font-size: clamp(3vw, 50%, 200px);
+  }
+  .music__menu-search-text {
+    font-size: clamp(3vw, 50%, 200px);
+  }
+  .music__menu-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    left: 0;
+  }
+  .music__menu-music-control {
+    display: inline-block;
+  }
+
+  .music__menu-search-submit {
+    font-size: clamp(3vw, 50%, 200px);
+  }
+
+  .music__menu-search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .music__menu-search-text {
+    display: inline-block;
+  }
+
+  .music__menu-search-item {
+    display: flex;
+
+    text-align-last: center;
+  }
+
+  .music__menu-search-form {
+    display: flex;
+  }
 }

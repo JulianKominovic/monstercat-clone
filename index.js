@@ -55,6 +55,7 @@ const startCollectingData = (localString) => {
   };
 
   const data = getSearchData(localString);
+
   let maxTries = 4;
   let counting = 0;
   const compileData = () => {
@@ -99,8 +100,6 @@ searchForm.addEventListener("submit", (e) => {
     showError(errorCode.ok);
     let localString = getTextFormatReady(e.target.elements[1].value);
     startCollectingData(localString);
-  } else {
-    showError(errorCode.tryAgain);
   }
 });
 
