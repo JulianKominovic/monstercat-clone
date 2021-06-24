@@ -16,6 +16,8 @@
       src="https://kit.fontawesome.com/1bad4afc9a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <title>Monstercat by JK</title>
   </head>
@@ -57,9 +59,17 @@
             >
           </div>
           <div class="music__menu-search-item">
-            <a href="#" class="music__menu-search-item-link"
-              ><i class="fas fa-search margin-left-icons-navbar"></i>SEARCH</a
-            >
+            <form class="music__menu-search-form" method="GET">
+              <button type="submit" class="music__menu-search-submit">
+                <i class="fas fa-search margin-left-icons-navbar"></i>
+              </button>
+              <input
+                class="music__menu-search-text"
+                type="text"
+                placeholder="BUSCAR ARTISTA"
+              />
+              <span class="errorHandling"></span>
+            </form>
           </div>
         </div>
       </div>
@@ -75,7 +85,7 @@
     <!-- feed -->
     <main class="feed">
       <!-- first section -->
-      <section class="feed__section fading-section">
+      <section class="feed__section fading-section" id="main-feed">
         <article class="feed__section-artist-img">
           <img
             src="./assets/artist-cover.jpg"
@@ -181,7 +191,6 @@
         </article>
       </section>
     </main>
-
     <script src="index.js"></script>
   </body>
 </html>

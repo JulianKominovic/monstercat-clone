@@ -41,8 +41,37 @@ body {
   color: #000;
   text-decoration: none;
   margin-left: 1vw;
-  font-size: clamp(1vw, 1rem, 2vw);
+
   font-weight: 700;
+}
+
+.music__menu-search-submit {
+  border: none;
+  background-color: transparent;
+  font-size: clamp(1vw, 1rem, 1.6vw);
+  cursor: pointer;
+}
+
+.music__menu-search-form {
+}
+
+.music__menu-search-text {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  background-color: var(--light-color);
+  font-weight: 400;
+  font-size: clamp(1vw, 1rem, 1.6vw);
+  text-decoration: none;
+  color: var(--light-dark-color);
+}
+
+.music__menu-search-text:focus-within {
+  outline: none;
+}
+
+.errorHandling {
+  color: red;
+  border-bottom: 2px solid black;
 }
 
 .margin-left-icons-navbar {
